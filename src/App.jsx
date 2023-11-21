@@ -46,7 +46,7 @@ function App() {
           type="text"
           placeholder="Add task"
           value={task}
-          maxLength={20}
+          maxLength={25}
           onChange={(e) => setTask(e.target.value)}
           onKeyDown={(e) => (e.key === "Enter" ? handleAdd() : null)}
         />
@@ -57,11 +57,12 @@ function App() {
       <div className="tasks">
         <ul>
           {tasks.map((todo, id) => (
-            <li key={id}>
-              <span
-                onClick={() => handleToggle(id)}
-                className={todo.isCompleted ? "striked" : ""}
-              >
+            <li
+              key={id}
+              onClick={() => handleToggle(id)}
+              className={todo.isCompleted ? "green" : ""}
+            >
+              <span className={todo.isCompleted ? "striked" : ""}>
                 {todo.task}
               </span>
               <button className="btn-remove" onClick={() => handleRemove(id)}>
