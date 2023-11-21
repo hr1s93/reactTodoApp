@@ -26,9 +26,9 @@ function App() {
       setTask("");
     }
   }
+
   function handleRemove(id) {
-    const updatedTasks = tasks.filter((_, index) => index !== id);
-    setTasks(updatedTasks);
+    setTasks(tasks.filter((_, index) => index !== id));
   }
 
   function handleToggle(id) {
@@ -57,20 +57,17 @@ function App() {
       <div className="tasks">
         <ul>
           {tasks.map((todo, id) => (
-            <>
-              <li
-                key={id}
+            <li key={id} className={todo.isCompleted ? "green" : ""}>
+              <span
                 onClick={() => handleToggle(id)}
-                className={todo.isCompleted ? "green" : ""}
+                className={todo.isCompleted ? "striked" : ""}
               >
-                <span className={todo.isCompleted ? "striked" : ""}>
-                  {todo.task}
-                </span>
-              </li>
+                {todo.task}
+              </span>
               <button className="btn-remove" onClick={() => handleRemove(id)}>
                 X
               </button>
-            </>
+            </li>
           ))}
         </ul>
       </div>
