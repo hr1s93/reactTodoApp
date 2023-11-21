@@ -71,7 +71,9 @@ li button {
 
 .striked {
   text-decoration: line-through;
+  color: white;
 }
+
 .green {
   background-color: rgb(94, 194, 94);
 }
