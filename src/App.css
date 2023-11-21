@@ -35,6 +35,20 @@ body {
   color: white;
 }
 
+ul {
+  display: flex;
+}
+
+.btn-remove {
+  background-color: red;
+  color: white;
+  border: 1px solid black;
+  height: 51px;
+  width: 51px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .tasks {
   display: flex;
   justify-content: center;
@@ -44,7 +58,8 @@ body {
 .tasks li {
   list-style: none;
   /* background-color: rgb(40, 194, 40); */
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   border: 1px solid black;
   color: black;
   display: flex;
