@@ -35,20 +35,6 @@ body {
   color: white;
 }
 
-ul {
-  display: flex;
-}
-
-.btn-remove {
-  background-color: red;
-  color: white;
-  border: 1px solid black;
-  height: 51px;
-  width: 51px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
 .tasks {
   display: flex;
   justify-content: center;
@@ -58,10 +44,8 @@ ul {
 .tasks li {
   list-style: none;
   /* background-color: rgb(40, 194, 40); */
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
   border: 1px solid black;
-  color: black;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,6 +56,7 @@ ul {
   padding-left: 10px;
   cursor: pointer;
   margin-left: -40px;
+  color: black;
 }
 
 li button {
@@ -86,11 +71,9 @@ li button {
 
 .striked {
   text-decoration: line-through;
-  color: white;
 }
-
 .green {
-  background-color: rgb(40, 194, 40);
+  background-color: rgb(94, 194, 94);
 }
 
 @media (max-width: 768px) {
