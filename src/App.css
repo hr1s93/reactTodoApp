@@ -76,16 +76,22 @@ li button {
   body {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .container {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
 
-  .tasks li {
-    width: 350px;
+  .input-bar {
+    height: 50px;
+    width: 70%;
+    margin-bottom: 10px;
+  }
+  .btn-add {
+    width: 50%;
+    height: 50px;
   }
 }
-
